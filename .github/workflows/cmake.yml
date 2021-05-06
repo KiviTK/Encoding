@@ -17,6 +17,7 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}
       run: |
+        ls
         cmake CMakeLists.txt
         make
 
