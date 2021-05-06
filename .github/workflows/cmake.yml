@@ -15,12 +15,14 @@ jobs:
 
     steps:
     - name: Build
+      working-directory: ${{github.workspace}}/build
       # Build your program with the given configuration
       run: 
         cmake CMakeLists.txt
         make
 
     - name: Test
+      working-directory: ${{github.workspace}}/build
       run:
         cmake CMakeLists.txt
         make
