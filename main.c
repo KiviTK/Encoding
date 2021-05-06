@@ -16,12 +16,13 @@ int main() {
 
     printf("Encoded sequence:\n");
     for (int i = 0; i < encoded->length; i++) {
-        printf("(%c, %d) ", encoded->data[i].c, encoded->data[i].n);
+        printf("(%c, %d) ", encoded->pairSequence[i].c, encoded->pairSequence[i].n);
     }
     printf("\n");
 
     printf("Started decoding the encoded sequence\n");
-    char* decodedStr = decodeSequence(encoded);
+    char decodedStr[512];
+    decodeSequence(decodedStr, 512, encoded);
     printf("Decoder has finished decoding the sequence.\n");
     printf("Decoded string:\n%s\n", decodedStr);
 
