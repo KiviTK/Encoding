@@ -1,0 +1,28 @@
+name: CMake
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Build
+      # Build your program with the given configuration
+      run: 
+        cmake CMakeLists.txt
+        make
+
+    - name: Test
+      run:
+        cmake CMakeLists.txt
+        make
+        ./Encoding-UnitTest
+      
