@@ -26,6 +26,8 @@ int main() {
     printf("Decoder has finished decoding the sequence.\n");
     printf("Decoded string:\n%s\n", decodedStr);
 
+    deleteEncoded(encoded);
+
     return 0;
 }
 
