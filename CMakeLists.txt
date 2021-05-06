@@ -8,4 +8,4 @@ include_directories(source)
 add_executable(Encoding
         source/encoded.h
         source/pair.h
-        main.c)
+        main.c source/encoded.c)

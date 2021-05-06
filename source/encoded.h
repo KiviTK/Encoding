@@ -2,10 +2,12 @@
 #define ENCODED_HEADER
 
 #include "pair.h" // Contains: struct Pair
+#include <stdlib.h>
 
 // A structure containing en encoded sequence.
 typedef struct Encoded
 {
+    Pair* pairSequence; // The sequence of pairs that contain the encoded string
     int length; // The length of the encoded sequence
 } Encoded;
 
