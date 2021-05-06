@@ -15,13 +15,13 @@ jobs:
 
     steps:
     - name: Build
-      working-directory: ${{github.workspace}}/build
+      working-directory: ${{github.workspace}}
       run: |
         cmake CMakeLists.txt
         make
 
     - name: Test
-      working-directory: ${{github.workspace}}/build
+      working-directory: ${{github.workspace}}
       run: |
         cmake CMakeLists.txt
         make
