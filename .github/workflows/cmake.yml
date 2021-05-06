@@ -17,13 +17,13 @@ jobs:
     - name: Build
       working-directory: ${{github.workspace}}/build
       # Build your program with the given configuration
-      run: 
+      run: |
         cmake CMakeLists.txt
         make
 
     - name: Test
       working-directory: ${{github.workspace}}/build
-      run:
+      run: |
         cmake CMakeLists.txt
         make
         ./Encoding-UnitTest
