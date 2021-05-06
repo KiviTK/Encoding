@@ -7,7 +7,7 @@
  * @field c The character that is encoded.
  * @field n The count of the character.
  */
-typedef sturct {
+typedef struct {
     char c;
     int n;
 } Pair;
